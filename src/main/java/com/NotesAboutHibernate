@@ -1,0 +1,9 @@
+Hibernate Collectons:
+(1) Bag semantic - List/ArrayList
+(2) Bag semantic with ID - List/ArrayList
+(3) List semantic - List/ArrayList
+(4) Set semantic - Set
+(5) Map semantic - Map
+
+Applicable for all relationships:
+cachecade

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">Nishi_07</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="dialect">org.hibernate.dialect.MySQL57Dialect</property>
+
+		<property name="show_sql">true</property>
+
+		<property name="format_sql">false</property>
+		<property name="hbm2ddl.auto">create</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">100</property>
+		<property name="current_session_context_class">thread</property>
+
+		<mapping class="com.relationship.dto.UserDetails" />
+		<mapping class="com.relationship.dto.Vehicle" />
+		<mapping class="com.relationship.dto.Home" />
+		<mapping class="com.relationship.dto.Book" />
+		<mapping class="com.relationship.dto.Laptop" />
+		<mapping class="com.singleTableInheritance.dto.Toy" />
+		<mapping class="com.singleTableInheritance.dto.TwoWheelerToy" />
+		<mapping class="com.singleTableInheritance.dto.FourWheelerToy" />
+		<mapping class="com.TablePerClassInheritance.dto.ToyTablePerClass" />
+		<mapping class="com.TablePerClassInheritance.dto.TwoWheelerToyTablePerClass" />
+		<mapping class="com.TablePerClassInheritance.dto.FourWheelerToyTablePerClass" />
+		<mapping class="com.joinedInheritance.dto.ToyJoined" />
+		<mapping class="com.joinedInheritance.dto.TwoWheelerToyJoined" />
+		<mapping class="com.joinedInheritance.dto.FourWheelerToyJoined" />
+
+	</session-factory>
+</hibernate-configuration>

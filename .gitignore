@@ -1,0 +1,11 @@
+# generated files
+target/
+
+note
+
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
