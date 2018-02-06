@@ -39,7 +39,7 @@ public class HibernateTest {
         home.setHomeName("Santiniketon");
 
         UserDetails user = new UserDetails();
-       /* Address homeAddress = new Address();
+        Address homeAddress = new Address();
         homeAddress.setCity("Amsterdam");
         homeAddress.setPinCode(1064);
         homeAddress.setState("west");
@@ -55,13 +55,13 @@ public class HibernateTest {
         listOfAddresses.add(officeAddress);
 
         listOfAddressesID.add(homeAddress);
-        listOfAddressesID.add(officeAddress);*/
+        listOfAddressesID.add(officeAddress);
 
         user.setUserName("Nishi");
-        //user.setHomeAddress(homeAddress);
-        //user.setOfficeAddress(officeAddress);
-        //user.setListOfAddresses(listOfAddresses);
-        //user.setListOfAddressesID(listOfAddressesID);
+        user.setHomeAddress(homeAddress);
+        user.setOfficeAddress(officeAddress);
+        user.setListOfAddresses(listOfAddresses);
+        user.setListOfAddressesID(listOfAddressesID);
 
         user.setHome(home);
         user.setVehicles(vehicles);
@@ -84,9 +84,9 @@ public class HibernateTest {
         Laptop laptop2=new Laptop();
         laptop2.setLaptopName("Mac");
 
-        /*laptops.add(laptop1);
+        laptops.add(laptop1);
         laptops.add(laptop2);
-        user.setLaptops(laptops);*/
+        user.setLaptops(laptops);
         user.getLaptops().add(laptop1);
         user.getLaptops().add(laptop2);
         laptop1.getUserList().add(user);

@@ -2,9 +2,18 @@
 package com.relationship.dto;
 
 import lombok.Data;
+import org.hibernate.annotations.CollectionId;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,6 +25,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Data
@@ -46,7 +57,7 @@ public class UserDetails {
     private Collection<Laptop> laptops = new ArrayList<Laptop>();
 
 
-    /*@Embedded
+    @Embedded
     @AttributeOverrides({@AttributeOverride(name = "city", column = @Column(name = "HOME_CITY_NAME")), @AttributeOverride(name = "pinCode", column = @Column(name = "HOME_PIN_CODE")), @AttributeOverride(name = "state", column = @Column(name = "HOME_STATE_NAME")), @AttributeOverride(name = "street", column = @Column(name = "HOME_STREET_NAME"))})
     private Address homeAddress;
 
@@ -61,5 +72,5 @@ public class UserDetails {
     @JoinTable(name = "USER_ADDRESS_COLLECTION", joinColumns = @JoinColumn(name = "USER_COLLECTION_ID"))
     @GenericGenerator(name = "sequence-gen", strategy = "sequence")
     @CollectionId(columns = {@Column(name = "ADDRESS_ID")}, generator = "sequence-gen", type = @Type(type = "long"))
-    private Collection<Address> listOfAddressesID = new ArrayList();*/
+    private Collection<Address> listOfAddressesID = new ArrayList();
 }
